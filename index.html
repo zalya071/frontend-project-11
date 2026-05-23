@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSS Reader</title>
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container py-5">
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+          <div class="card shadow-sm">
+
+            <div class="card-body">
+
+              <h1 class="mb-4">
+                RSS Reader
+              </h1>
+
+              <form class="rss-form">
+
+                <label for="url-input" class="form-label">
+                  Ссылка RSS
+                </label>
+
+                <div class="row g-2">
+
+                  <div class="col-md-9">
+
+                    <input
+                      id="url-input"
+                      name="url"
+                      type="text"
+                      class="form-control"
+                      placeholder="https://example.com/feed.xml"
+                      autocomplete="off"
+                      autofocus
+                    >
+
+                    <div class="feedback mt-2"></div>
+
+                  </div>
+
+                  <div class="col-md-3">
+
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100"
+                    >
+                      Добавить
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+          <div class="feeds mt-5"></div>
+
+          <div class="posts mt-5"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h5 class="modal-title"></h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+
+          </div>
+
+          <div class="modal-body">
+            <p></p>
+          </div>
+
+          <div class="modal-footer">
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Закрыть
+            </button>
+
+            <a
+              class="btn btn-primary full-article"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Читать полностью
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+
+  </body>
+</html>
