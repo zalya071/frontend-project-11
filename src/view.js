@@ -79,7 +79,7 @@ const renderPosts = (container, posts, state) => {
     link.rel = 'noopener noreferrer';
 
     if (state.ui.viewedPosts.includes(post.id)) {
-      link.classList.add('fw-normal');
+      link.classList.add('fw-normal', 'link-secondary');
     } else {
       link.classList.add('fw-bold');
     }
